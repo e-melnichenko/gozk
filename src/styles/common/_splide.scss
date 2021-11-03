@@ -13,10 +13,10 @@
 
     @include breakpoint($desktop-lg-width) {
       &--prev {
-        left: -8.6rem;
+        left: -9rem;
       }
       &--next {
-        right: -8.6rem;
+        right: -9rem;
       }
     }
 

@@ -1,0 +1,23 @@
+{% extends 'templates/base.twig' %}
+
+{% block page %}
+{% include 'templates/categories.twig' with {
+  mobileImg: 'services-customer.jpg',
+  desktopImg: 'services-customer.jpg',
+  title: 'Услуги участнику',
+  list: [
+    {
+      title: 'Ускоренная регистрация на АСТ ГОЗ',
+    },
+    {
+      title: 'Поиск закупок, анализ документации',
+    },
+    {
+      title: 'Подготовка заявки',
+    },
+    {
+      title: 'Подача заявки',
+    },
+  ]
+} %}
+{% endblock %}

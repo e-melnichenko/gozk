@@ -1,0 +1,33 @@
+<section class="categories">
+  <div
+    class="categories__hero"
+    style="
+      --category-img-mobile: url(../assets/img/categories/{{ mobileImg }});
+      --category-img-desktop: url(../assets/img/categories/{{ desktopImg }});
+    "
+  >
+    <div class="container">
+      {% include 'breadcrumbs.twig' %}
+      <h1 class="categories__title title">{{ title }}</h1>
+    </div>
+  </div>
+  <div class="categories__list-wrap">
+    <div class="container">
+      <ul class="categories__list">
+      {% for item in list %}
+        <li class="categories__item">
+          <a href="#" class="categories__item-link">
+            <h3 class="categories__item-title">{{ item.title }}</h3>
+
+            {% if item.desc %}
+              <p class="categories__item-desc">{{ item.desc }}</p>
+            {% endif %}
+
+            <svg class="categories__item-arrow"><use xlink:href="assets/sprite.svg#arrow-right"></use></svg>
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

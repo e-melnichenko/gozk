@@ -1,0 +1,24 @@
+{% extends 'templates/base.twig' %}
+
+{% block page %}
+{% include 'templates/categories.twig' with {
+  mobileImg: 'services-customer.jpg',
+  desktopImg: 'services-customer.jpg',
+  title: 'Услуги заказчику',
+  list: [
+    {
+      title: 'Расчет и обоснование <br> НМЦ',
+      desc: 'отдельные банковские счета'
+    },
+    {
+      title: 'Подготовка закупочной документации',
+    },
+    {
+      title: 'Централизация закупочной деятельности',
+    },
+    {
+      title: 'Организация и проведение закупки, заключение контракта',
+    },
+  ]
+} %}
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'templates/base.twig' %}
+
+{% block page %}
+{% include 'templates/categories.twig' with {
+  mobileImg: 'fin-products.jpg',
+  desktopImg: 'fin-products.jpg',
+  title: 'Финансовые продукты',
+  list: [
+    {
+      title: 'Рассчетно-кассовое обслуживания',
+      desc: 'отдельные банковские счета'
+    },
+    {
+      title: 'Кредитование',
+    },
+    {
+      title: 'Факторинг',
+    },
+    {
+      title: 'Финансирование <br> контрактов',
+    },
+    {
+      title: 'Банковские <br> гарантии',
+    },
+    {
+      title: 'Зарплатные <br> проекты',
+    },
+    {
+      title: 'Бухгалтерский учет <br> по&nbsp;контрактам в ГОЗ',
+      desc: 'раздельный учет'
+    },
+  ]
+} %}
+{% endblock %}

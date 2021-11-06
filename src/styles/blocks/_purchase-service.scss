@@ -1,0 +1,26 @@
+.purchase-service {
+  margin-bottom: 12rem;
+
+  &__title {
+    margin-bottom: 5rem;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -2rem;
+    margin-right: -2rem;
+  }
+
+  &__card {
+    width: calc(50% - 2rem);
+    margin-right: 2rem;
+    margin-top: 2rem;
+    padding: 4rem;
+    padding-bottom: 5.4rem;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    bg
+  }
+}

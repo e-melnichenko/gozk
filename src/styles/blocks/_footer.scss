@@ -1,3 +1,87 @@
 .footer {
+  color: #fff;
 
+  &__top {
+    background-color: #0B2236;
+    padding: 7rem 0;
+  }
+
+  &__top-inner {
+    display: flex;
+  }
+
+  &__section {
+    flex-grow: 1;
+    width: 24%;
+    min-width: 26rem;
+    padding: 0 3rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+      border: none;
+    }
+
+    &._logo {
+      width: 22%;
+    }
+    &._address {
+      width: 30%;
+    }
+  }
+
+  &__logo-link {
+    display: inline-block;
+    margin-bottom: 2.7rem;
+    color: #fff;
+  }
+
+  &__logo-img {
+    width: 20rem;
+    height: 6.5rem;
+  }
+
+  &__company-name {
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.9rem;
+  }
+
+  &__section-title {
+    margin: 0;
+    margin-bottom: 1.3rem;
+    padding-top: 1rem;
+    color: #A1A1A1;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+  }
+
+  &__section-content {
+    text-decoration: none;
+    color: #fff;
+    margin: 0;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+
+  &__bottom {
+    padding: 2.3rem 0;
+    background: #103250;
+  }
+
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bottom-text {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-decoration: none;
+  }
 }

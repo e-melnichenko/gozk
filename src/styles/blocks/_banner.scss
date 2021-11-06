@@ -1,0 +1,30 @@
+.banner {
+  background-image: url("../assets/img/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #12528D;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 41rem;
+    padding: 4rem 0;
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+    font-weight: 600;
+    font-size: 4.2rem;
+    line-height: 4.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  &__order-link {
+
+  }
+}

@@ -1,32 +1,37 @@
 .btn {
   display: inline-block;
-  padding: 1.9rem 2.4rem;
+  padding: 1.9rem 5rem;
   color: #fff;
   font-size: 1.6rem;
   line-height: 1;
   font-weight: 700;
   text-decoration: none;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
   line-height: 2rem;
   background-color: $color-main;
   border-radius: .6rem;
   text-align: center;
   border: 1px solid $color-main;
   outline: none;
-
-  &._full {
-    width: 100%;
+  @include hover() {
+    background: #3E7B01;
+    border-color: $color-main;
   }
 
-  &._white {
-    color: $color-main;
-    background-color: #fff;
-    border-color: #fff;
-  }
+  // &._full {
+  //   width: 100%;
+  // }
 
-  &._bordered-white {
-    color: $color-main;
-    background-color: #fff;
-    border-color:#E3E4E6;
-  }
+  // &._white {
+  //   color: $color-main;
+  //   background-color: #fff;
+  //   border-color: #fff;
+  // }
+
+  // &._bordered-white {
+  //   color: $color-main;
+  //   background-color: #fff;
+  //   border-color:#E3E4E6;
+  // }
 }

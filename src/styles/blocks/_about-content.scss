@@ -1,0 +1,43 @@
+.about-content {
+  &__hero {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: var(--category-img-mobile);
+    @include breakpoint($tablet-width) {
+      background-image: var(--category-img-desktop);
+    }
+
+    &::after {
+      content: '';
+      @include stretchAbsolute();
+      background: rgba(18, 82, 141, 0.6);
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__hero-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 46rem;
+    padding-top: calc(var(--header-height) + 2rem);
+    padding-bottom: 2rem;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: 7rem;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+  }
+
+}

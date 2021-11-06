@@ -1,0 +1,67 @@
+.content {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 10rem 0;
+
+  h2, h3, p, ul {
+    margin: 0;
+    margin-bottom: 3.2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h2, h3 {
+    margin-top: 6rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  *:not(ul) {
+    max-width: 77rem;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.03em;
+  }
+
+  p, li {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.03em;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -2rem;
+
+    li {
+      width: calc(100% / 3);
+      margin-top: 2rem;
+      padding: 0 2.2rem;
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+      background-image: url("../assets/img/green-checkmark.svg");
+      background-repeat: no-repeat;
+      background-position: left .6rem top .4rem;
+      &:nth-child(3n) {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+  }
+
+
+}

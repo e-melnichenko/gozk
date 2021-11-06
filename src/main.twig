@@ -4,6 +4,7 @@
 
 {% block page %}
 <h1 class="visually-hidden">Центр поддержки предприятий ОПК</h1>
+
 <section class="hero section">
   <div class="container">
     <div class="splide js-slider" data-name="hero">
@@ -77,31 +78,7 @@
   </div>
 </section>
 
-<section class="purchase-service">
-  <div class="container">
-    <h2 class="purchase-service__title title">Услуги в&nbsp;сфере закупок</h2>
-    <div class="purchase-service__wrap">
-      <div class="purchase-service__card _customer">
-        <h3 class="purchase-service__card-title">Заказчику</h3>
-        <ul class="purchase-service__list">
-          <li class="purchase-service__item">Расчет и&nbsp;обоснование НМЦ</li>
-          <li class="purchase-service__item">Подготовка закупочной документации</li>
-          <li class="purchase-service__item">Централизация закупочной деятельности</li>
-          <li class="purchase-service__item">Организация и&nbsp;проведение закупки, заключение контракта</li>
-        </ul>
-      </div>
-      <div class="purchase-service__card _participant">
-        <h3 class="purchase-service__card-title">Участнику</h3>
-        <ul class="purchase-service__list">
-          <li class="purchase-service__item">Ускоренная регистрация на&nbsp;АСТ ГОЗ</li>
-          <li class="purchase-service__item">Поиск закупок, анализ документации</li>
-          <li class="purchase-service__item">Подготовка заявки</li>
-          <li class="purchase-service__item">Подача заявки</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+{% include 'templates/purchase-service.twig' %}
 
 {% include 'templates/banner.twig' %}
 

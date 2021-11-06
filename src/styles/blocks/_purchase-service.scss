@@ -1,8 +1,26 @@
 .purchase-service {
   margin-bottom: 12rem;
 
-  &__title {
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 5rem;
+  }
+
+  &__section-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #31B5FF;
+
+    svg {
+      width: 1.7rem;
+      height: 0.9rem;
+      fill: currentColor;
+      margin-left: 0.7rem;
+    }
   }
 
   &__wrap {

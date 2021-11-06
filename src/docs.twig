@@ -1,0 +1,65 @@
+{% extends 'templates/base.twig' %}
+
+{% block page %}
+<div class="docs">
+  <div class="container">
+
+    {% include 'templates/breadcrumbs.twig' %}
+
+    <h1 class="docs__title title">Документы</h1>
+    <ul class="docs__list">
+      <li class="docs__item">
+        <a href="#" target="_blank" class="docs__item-link">
+          <svg class="docs__format-icon"><use xlink:href="assets/sprite.svg#doc-pdf"></use></svg>
+          <p class="docs__item-name">Заголовок документа</p>
+        </a>
+      </li>
+      <li class="docs__item">
+        <a href="#" target="_blank" class="docs__item-link">
+          <svg class="docs__format-icon"><use xlink:href="assets/sprite.svg#doc-pdf"></use></svg>
+          <p class="docs__item-name">Заголовок документа в пару строк</p>
+        </a>
+      </li>
+      <li class="docs__item">
+        <a href="#" target="_blank" class="docs__item-link">
+          <svg class="docs__format-icon"><use xlink:href="assets/sprite.svg#doc-pdf"></use></svg>
+          <p class="docs__item-name">Заголовок документа</p>
+        </a>
+      </li>
+      <li class="docs__item">
+        <a href="#" target="_blank" class="docs__item-link">
+          <svg class="docs__format-icon"><use xlink:href="assets/sprite.svg#doc-pdf"></use></svg>
+          <p class="docs__item-name">Заголовок документа</p>
+        </a>
+      </li>
+      <li class="docs__item">
+        <a href="#" target="_blank" class="docs__item-link">
+          <svg class="docs__format-icon"><use xlink:href="assets/sprite.svg#doc-pdf"></use></svg>
+          <p class="docs__item-name">Заголовок документа в пару строк</p>
+        </a>
+      </li>
+      <li class="docs__item">
+        <a href="#" target="_blank" class="docs__item-link">
+          <svg class="docs__format-icon"><use xlink:href="assets/sprite.svg#doc-pdf"></use></svg>
+          <p class="docs__item-name">Заголовок документа</p>
+        </a>
+      </li>
+      <li class="docs__item">
+        <a href="#" target="_blank" class="docs__item-link">
+          <svg class="docs__format-icon"><use xlink:href="assets/sprite.svg#doc-pdf"></use></svg>
+          <p class="docs__item-name">Заголовок документа в пару строк</p>
+        </a>
+      </li>
+      <li class="docs__item">
+        <a href="#" target="_blank" class="docs__item-link">
+          <svg class="docs__format-icon"><use xlink:href="assets/sprite.svg#doc-pdf"></use></svg>
+          <p class="docs__item-name">Заголовок документа</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+{% include 'templates/purchase-service.twig' %}
+
+{% endblock %}

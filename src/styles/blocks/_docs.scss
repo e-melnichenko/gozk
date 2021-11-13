@@ -89,23 +89,4 @@
     letter-spacing: 0.03em;
     transition: color .3s;
   }
-
-  .breadcrumbs {
-    padding: 1.5rem 0;
-    &__link,
-    &__link:last-child {
-      color: #12528D;
-    }
-
-    &__link {
-      @include hover() {
-        color: #23394E;
-      }
-    }
-
-    &__arrow::before,
-    &__arrow::after {
-      background-color: $color-main;
-    }
-  }
 }

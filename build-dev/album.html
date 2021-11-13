@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>Default title</title>
+
+  <link rel="preload" href="./assets/fonts/Raleway/Raleway-Regular.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="./assets/fonts/Raleway/Raleway-Medium.woff2" as="font" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="./styles/main.css">
+
+</head>
+
+<body>
+  <div class="site-wrap">
+    <header class="header js-header">
+      HEADER
+    </header>
+
+    <main class="site-content">
+      <section class="album">
+        <div class="detail-hero" style="
+    --hero-img-mobile: url('../assets/img/hero-bg/album.jpg');
+    --hero-img-desktop: url('../assets/img/hero-bg/album.jpg');
+  ">
+          <div class="container">
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__arrow"></span>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link">Категория</a>
+                  <span class="breadcrumbs__arrow"></span>
+                </li>
+                <li class="breadcrumbs__item">
+                  <span href="#" class="breadcrumbs__link">Каталог</span>
+                </li>
+              </ul>
+            </div>
+
+            <h1 class="detail-hero__title">Название альбома</h1>
+
+            <p class="detail-hero__text">23.09.2021</p>
+          </div>
+        </div>
+
+
+        <div class="container">
+          <ul class="album__list">
+            <li class="album__item col-2">
+              <a class="album__item-link" data-fslightbox href="assets/img/album/1.jpg">
+                <img class="album__item-img" src="assets/img/album/1.jpg" alt="">
+              </a>
+            </li>
+            <li class="album__item col-1">
+              <a class="album__item-link" data-fslightbox href="assets/img/album/2.jpg">
+                <img class="album__item-img" src="assets/img/album/2.jpg" alt="">
+              </a>
+            </li>
+            <li class="album__item col-1">
+              <a class="album__item-link" data-fslightbox href="assets/img/album/3.jpg">
+                <img class="album__item-img" src="assets/img/album/3.jpg" alt="">
+              </a>
+            </li>
+            <li class="album__item col-1">
+              <a class="album__item-link" data-fslightbox href="assets/img/album/4.jpg">
+                <img class="album__item-img" src="assets/img/album/4.jpg" alt="">
+              </a>
+            </li>
+            <li class="album__item col-1">
+              <a class="album__item-link" data-fslightbox href="assets/img/album/5.jpg">
+                <img class="album__item-img" src="assets/img/album/5.jpg" alt="">
+              </a>
+            </li>
+            <li class="album__item col-2">
+              <a class="album__item-link" data-fslightbox href="assets/img/album/6.jpg">
+                <img class="album__item-img" src="assets/img/album/6.jpg" alt="">
+              </a>
+            </li>
+            <li class="album__item col-3">
+              <a class="album__item-link" data-fslightbox href="assets/img/album/7.jpg">
+                <img class="album__item-img" src="assets/img/album/7.jpg" alt="">
+              </a>
+            </li>
+            <li class="album__item col-1">
+              <a class="album__item-link" data-fslightbox href="assets/img/album/8.jpg">
+                <img class="album__item-img" src="assets/img/album/8.jpg" alt="">
+              </a>
+            </li>
+            <li class="album__item col-1">
+              <a class="album__item-link" data-fslightbox href="assets/img/album/9.jpg">
+                <img class="album__item-img" src="assets/img/album/9.jpg" alt="">
+              </a>
+            </li>
+            <li class="album__item col-3">
+              <a class="album__item-link" data-fslightbox href="assets/img/album/10.jpg">
+                <img class="album__item-img" src="assets/img/album/10.jpg" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <div class="footer__top-inner">
+            <div class="footer__section _logo">
+              <a href="/" class="footer__logo-link">
+                <svg class="footer__logo-img">
+                  <use xlink:href="assets/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <p class="footer__company-name">ООО &laquo;ЕСК&raquo;</p>
+            </div>
+            <div class="footer__section">
+              <h3 class="footer__section-title">Номер телефона</h3>
+              <a href="tel:88009999999" class="footer__section-content">8 800 999-99-99</a>
+            </div>
+            <div class="footer__section">
+              <h3 class="footer__section-title">Email</h3>
+              <a href="mailto:info@gozk.ru" target="_blank" class="footer__section-content">info@gozk.ru</a>
+            </div>
+            <div class="footer__section _address">
+              <h3 class="footer__section-title">Адрес</h3>
+              <p class="footer__section-content">620137, г. Екатеринбург, пер. Шоферов, д.&nbsp;5, оф.&nbsp;305</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="footer__bottom-inner">
+            <p class="footer__bottom-text">&copy;2021&nbsp;ООО &laquo;ЕСК&raquo;. Все права защищены</p>
+            <a href="#" target="_blank" class="footer__bottom-text">Политика конфиденциальности</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popup js-popup" id="error-popup">
+      <button class="popup__close-btn js-close-popup" type="button">
+        <svg>
+          <use xlink:href="assets/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <h3 class="title popup__title _centered">Что-то пошло не так.</h3>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

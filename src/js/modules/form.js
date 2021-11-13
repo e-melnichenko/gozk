@@ -1,25 +1,25 @@
-import HeaderCart from "./headerCart";
+import { FORMS } from "../config";
 import Popup from "./Popup";
 
 export default function initForm() {
-  const config = {
-    "add-to-cart": {
-      onSuccess() {
-        Popup.open('order-success-popup');
-        HeaderCart.update();
-      },
-    },
-    "call-back-success-popup": {
-      onSuccess() {
-        Popup.open('call-back-success-popup')
-      },
-    },
-    "feedback-success-popup": {
-      onSuccess() {
-        Popup.open('feedback-success-popup')
-      },
-    },
-  }
+  // const config = {
+  //   "add-to-cart": {
+  //     onSuccess() {
+  //       Popup.open('order-success-popup');
+  //       HeaderCart.update();
+  //     },
+  //   },
+  //   "call-back-success-popup": {
+  //     onSuccess() {
+  //       Popup.open('call-back-success-popup')
+  //     },
+  //   },
+  //   "feedback-success-popup": {
+  //     onSuccess() {
+  //       Popup.open('feedback-success-popup')
+  //     },
+  //   },
+  // }
 
   document.addEventListener('submit', async function(e) {
     const form = e.target.closest('.js-form');
@@ -30,21 +30,30 @@ export default function initForm() {
     if (!isFormCorrect(form)) return
 
     const formData = new FormData(form);
-    const {method, action} = form;
-
-    const res = await fetch(action, {
-      method,
-      body: formData
-    });
-
+    const { action } = form;
     const formName = form.dataset.name;
 
-    if(res.ok) {
-      config[formName].onSuccess()
+    form.classList.add('_loading');
+
+    try {
+      const res = await fetch(
+        action,
+        { method: 'post', body: formData }
+      )
+      const data = res.json();
+
+      if(data.success !== true) {
+        throw new Error('form response success is not true')
+      }
+
+      FORMS[formName].onSuccess(data)
       form.reset();
-    } else {
-      Popup.open('error-popup')
+    } catch(e) {
+      console.error(e);
+      Popup.open('error-popup');
     }
+
+    form.classList.remove('_loading');
   });
 
   document.addEventListener('input', (e) => {
@@ -56,9 +65,10 @@ export default function initForm() {
 }
 
 const regexp = {
-  phone: /\+7 \(\d{3}\)-\d{3}-\d{2}-\d{2}/, // +7 (999)-999-99-99
+  phone: /\+7 \d{3}-\d{3}-\d{2}-\d{2}/, // +7 (999)-999-99-99
   name: /[а-яёa-z\s]+$/i, // одна и более букв латиницы или кириллицы или пробел
   message: /.+/,  // хотя бы один символ
+  email: /.+@.+\..+/, // t@t.t где t - хотя бы один символ
 }
 
 function isFormCorrect(form) {

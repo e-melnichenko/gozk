@@ -1,0 +1,17 @@
+<div
+  class="detail-hero"
+  style="
+    --hero-img-mobile: url('../assets/img/hero-bg/{{ bgMobile}}');
+    --hero-img-desktop: url('../assets/img/hero-bg/{{ bgDesktop}}');
+  "
+>
+  <div class="container">
+    {% include 'breadcrumbs.twig' %}
+
+    <h1 class="detail-hero__title">{{ title }}</h1>
+
+  {% if (text) %}
+    <p class="detail-hero__text">{{ text }}</p>
+  {% endif %}
+  </div>
+</div>

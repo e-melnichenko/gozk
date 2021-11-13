@@ -13,6 +13,7 @@
   <link rel="preload" href="./assets/fonts/Raleway/Raleway-Medium.woff2" as="font" crossorigin="anonymous" />
 
   <link rel="stylesheet" href="./styles/main.css">
+
 </head>
 
 <body>
@@ -21,12 +22,11 @@
       HEADER
     </header>
 
-
     <main class="site-content">
       <section class="categories">
         <div class="categories__hero" style="
-      --category-img-mobile: url(../assets/img/categories/services-customer.jpg);
-      --category-img-desktop: url(../assets/img/categories/services-customer.jpg);
+      --category-img-mobile: url(../assets/img/categories/services-participant.jpg);
+      --category-img-desktop: url(../assets/img/categories/services-participant.jpg);
     ">
           <div class="container">
             <div class="breadcrumbs">
@@ -43,52 +43,62 @@
                 </li>
               </ul>
             </div>
+
             <h1 class="categories__title title">Услуги участнику</h1>
           </div>
         </div>
         <div class="categories__list-wrap">
           <div class="container">
             <ul class="categories__list">
+
               <li class="categories__item">
                 <a href="#" class="categories__item-link">
                   <h3 class="categories__item-title">Ускоренная регистрация на АСТ ГОЗ</h3>
 
 
+
                   <svg class="categories__item-arrow">
                     <use xlink:href="assets/sprite.svg#arrow-right"></use>
                   </svg>
                 </a>
               </li>
+
               <li class="categories__item">
                 <a href="#" class="categories__item-link">
                   <h3 class="categories__item-title">Поиск закупок, анализ документации</h3>
 
 
+
                   <svg class="categories__item-arrow">
                     <use xlink:href="assets/sprite.svg#arrow-right"></use>
                   </svg>
                 </a>
               </li>
+
               <li class="categories__item">
                 <a href="#" class="categories__item-link">
                   <h3 class="categories__item-title">Подготовка заявки</h3>
 
 
+
                   <svg class="categories__item-arrow">
                     <use xlink:href="assets/sprite.svg#arrow-right"></use>
                   </svg>
                 </a>
               </li>
+
               <li class="categories__item">
                 <a href="#" class="categories__item-link">
                   <h3 class="categories__item-title">Подача заявки</h3>
 
 
+
                   <svg class="categories__item-arrow">
                     <use xlink:href="assets/sprite.svg#arrow-right"></use>
                   </svg>
                 </a>
               </li>
+
             </ul>
           </div>
         </div>
@@ -142,6 +152,16 @@
       </div>
     </footer>
 
+    <div class="popup js-popup" id="error-popup">
+      <button class="popup__close-btn js-close-popup" type="button">
+        <svg>
+          <use xlink:href="assets/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <h3 class="title popup__title _centered">Что-то пошло не так.</h3>
+      </div>
+    </div>
   </div>
 
   <script src="./js/main.js"></script>

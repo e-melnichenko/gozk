@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "@splidejs/splide": "^3.2.1",
+    "fslightbox": "^3.3.0-2",
     "maska": "^1.4.6",
     "normalize.css": "^8.0.1",
     "svg4everybody": "^2.1.9"

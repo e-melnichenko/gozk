@@ -37,3 +37,24 @@
     z-index: $z2;
   }
 }
+
+._dark-header {
+  .breadcrumbs {
+    padding: 1.5rem 0;
+    &__link,
+    &__link:last-child {
+      color: #12528D;
+    }
+
+    &__link {
+      @include hover() {
+        color: #23394E;
+      }
+    }
+
+    &__arrow::before,
+    &__arrow::after {
+      background-color: $color-main;
+    }
+  }
+}

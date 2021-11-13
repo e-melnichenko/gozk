@@ -12,9 +12,13 @@
     <link rel="preload" href="./assets/fonts/Raleway/Raleway-Medium.woff2" as="font" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="./styles/main.css">
+
+    {% if map %}
+      <script src="https://api-maps.yandex.ru/2.1/?c14d3178-13f2-4774-9ead-d5ee054cf716&lang=ru_RU&" type="text/javascript"></script>
+    {% endif %}
 </head>
 
-<body>
+<body {{ darkHeader ? 'class="_dark-header"' }}>
 <div class="site-wrap">
   {% include 'header.twig' %}
 

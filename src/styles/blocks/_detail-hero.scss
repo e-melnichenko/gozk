@@ -1,0 +1,38 @@
+.detail-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 46rem;
+  margin-bottom: -12rem;
+  padding-bottom: calc(12rem + 2rem);
+  padding-top: calc(var(--header-height) + 2rem);
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: var(--hero-img-mobile);
+  @include breakpoint($tablet-width) {
+    background-image: var(--hero-img-desktop);
+  }
+
+  &::after {
+    content: '';
+    @include stretchAbsolute();
+    background: rgba(18, 82, 141, 0.6);
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: 7rem;
+    letter-spacing: 0.05em;
+  }
+}

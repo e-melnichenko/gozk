@@ -14,9 +14,23 @@
   text-align: center;
   border: 1px solid $color-main;
   outline: none;
+  cursor: pointer;
+  transition: all .3s;
+
   @include hover() {
     background: #3E7B01;
     border-color: $color-main;
+  }
+
+  &._blue {
+    color: #fff;
+    background-color: #31B5FF;
+    border-color: #31B5FF;
+    @include hover() {
+      background-color: #4ebcfc;
+      border-color: #4ebcfc;
+    }
+
   }
 
   // &._full {

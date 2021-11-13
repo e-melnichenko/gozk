@@ -1,0 +1,115 @@
+.contacts {
+  margin-bottom: 8rem;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 2.2rem;
+    font-size: 6rem;
+    line-height: 7rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #313131;
+  }
+
+  &__company-type {
+    margin: 0;
+    margin-bottom: .5rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__company-name {
+    margin: 0;
+    margin-bottom: 4rem;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.03em;
+  }
+
+  &__list {
+    margin-bottom: 8rem;
+    display: grid;
+    grid-template-areas:
+      "address address phone social"
+      "email details working-hours working-hours"
+    ;
+    grid-column-gap: 5.4rem;
+    grid-row-gap: 4rem;
+    padding: 2rem;
+    background: #ECF2F8;
+    border-radius: 8px;
+  }
+
+  &__item {
+    &._address {
+      grid-area: address;
+    }
+    &._phone {
+      grid-area: phone;
+    }
+    &._social {
+      grid-area: social;
+      display: flex;
+      align-items: flex-start;
+    }
+    &._email {
+      grid-area: email;
+    }
+    &._details {
+      grid-area: details;
+
+      .contacts__item-value {
+        display: inline-flex;
+        align-items: center;
+        color: #12528D;
+
+        svg {
+          width: 0.7rem;
+          height: 0.7rem;
+          margin-left: .6rem;
+          fill: none;
+        }
+      }
+    }
+    &._working-hours {
+      grid-area: working-hours;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 0.3rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    color: #60BF00;
+  }
+
+  &__item-value {
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.03em;
+    transition: color .3s;
+
+    &[href] {
+      @include hover() {
+        color: #12528D;
+      }
+    }
+  }
+
+  &__social-wrap {
+    margin-right: 2.3rem;
+  }
+
+  &__map {
+    height: 32.8rem;
+  }
+}

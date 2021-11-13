@@ -1,4 +1,6 @@
 .form {
+  position: relative;
+
   &__select {
     @include breakpoint($tablet-width) {
       width: 28rem;
@@ -17,7 +19,7 @@
     display: none;
 
     &:checked + .form__checkbox-text::before {
-      background-image: url('../assets/img/mark.svg');
+      background-image: url('../assets/img/blue-checkmark.svg');
       background-size: 1rem 1rem;
       background-position: top right;
       background-repeat: no-repeat;
@@ -57,16 +59,18 @@
   }
 
   &__text-input {
-    padding: 1.4rem;
-    font-size: 1.4rem;
+    padding: 2rem 2.5rem;
+    padding-top: 2.3rem;
+    font-size: 1.6rem;
     line-height: 1;
-    border: 1px solid #BBBBBB;
-    border-radius: 3px;
+    border: 1px solid #ECF2F8;
+    background-color: #ECF2F8;
     width: 100%;
     resize: none;
+    outline: none;
 
     &::placeholder {
-      color: #9A9A9A;
+      color: #979797;
     }
   }
 
@@ -82,14 +86,4 @@
       }
     }
   }
-
-  &._grey {
-    .form {
-      &__text-input {
-        background-color: #ECECEC;
-        border-color: #ECECEC;
-      }
-    }
-  }
-
 }

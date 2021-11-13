@@ -13,6 +13,7 @@
   <link rel="preload" href="./assets/fonts/Raleway/Raleway-Medium.woff2" as="font" crossorigin="anonymous" />
 
   <link rel="stylesheet" href="./styles/main.css">
+
 </head>
 
 <body>
@@ -20,7 +21,6 @@
     <header class="header js-header">
       HEADER
     </header>
-
 
     <main class="site-content">
       <div class="container" style="margin-bottom: 100px">
@@ -44,6 +44,15 @@
           </li>
           <li style="margin-bottom: 1rem">
             <a href="docs.html">Документы</a>
+          </li>
+          <li style="margin-bottom: 1rem">
+            <a href="gallery.html">Фотографии</a>
+          </li>
+          <li style="margin-bottom: 1rem">
+            <a href="album.html">Альбом</a>
+          </li>
+          <li style="margin-bottom: 1rem">
+            <a href="contacts.html">Контакты</a>
           </li>
         </ul>
       </div>
@@ -86,6 +95,16 @@
       </div>
     </footer>
 
+    <div class="popup js-popup" id="error-popup">
+      <button class="popup__close-btn js-close-popup" type="button">
+        <svg>
+          <use xlink:href="assets/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <h3 class="title popup__title _centered">Что-то пошло не так.</h3>
+      </div>
+    </div>
   </div>
 
   <script src="./js/main.js"></script>

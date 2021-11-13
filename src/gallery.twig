@@ -1,0 +1,29 @@
+{% extends 'templates/base.twig' %}
+
+{% block page %}
+<section class="gallery">
+  {% include 'templates/detail-hero.twig' with {
+    title: 'Фотографии',
+    bgMobile: 'gallery.jpg',
+    bgDesktop: 'gallery.jpg',
+  } %}
+
+
+  <div class="container">
+    <ul class="gallery__list">
+    {% for item in 0..3 %}
+      <li class="gallery__item">
+        <a href="#" class="gallery__item-link">
+          <img src="assets/img/gallery/{{ loop.index }}.jpg" alt="" class="gallery__item-img">
+          <h3 class="gallery__item-title">Название альбома</h3>
+          <p class="gallery__item-date">23.09.2021</p>
+          <svg class="gallery__item-arrow"><use xlink:href="assets/sprite.svg#arrow-right"></use></svg>
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+
+</section>
+
+{% endblock %}

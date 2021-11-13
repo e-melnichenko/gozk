@@ -13,14 +13,14 @@
   <link rel="preload" href="./assets/fonts/Raleway/Raleway-Medium.woff2" as="font" crossorigin="anonymous" />
 
   <link rel="stylesheet" href="./styles/main.css">
+
 </head>
 
-<body>
+<body class="_dark-header">
   <div class="site-wrap">
     <header class="header js-header">
       HEADER
     </header>
-
 
     <main class="site-content">
       <div class="docs">
@@ -184,6 +184,16 @@
       </div>
     </footer>
 
+    <div class="popup js-popup" id="error-popup">
+      <button class="popup__close-btn js-close-popup" type="button">
+        <svg>
+          <use xlink:href="assets/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <h3 class="title popup__title _centered">Что-то пошло не так.</h3>
+      </div>
+    </div>
   </div>
 
   <script src="./js/main.js"></script>

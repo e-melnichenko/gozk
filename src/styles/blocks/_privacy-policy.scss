@@ -1,0 +1,25 @@
+.privacy-policy {
+  margin-bottom: 6.2rem;
+  &__title {
+    margin: 0;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 6rem;
+    line-height: 7rem;
+    color: #313131;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .breadcrumbs {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content {
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: 77rem;
+  }
+}

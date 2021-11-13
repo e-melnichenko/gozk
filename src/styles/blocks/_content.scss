@@ -18,9 +18,6 @@
     }
   }
 
-  *:not(ul) {
-    max-width: 77rem;
-  }
 
   h2 {
     font-weight: 600;
@@ -42,23 +39,57 @@
     letter-spacing: 0.03em;
   }
 
-  ul {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -2rem;
 
-    li {
-      width: calc(100% / 3);
-      margin-top: 2rem;
-      padding: 0 2.2rem;
-      border-right: 1px solid rgba(0, 0, 0, 0.2);
-      background-image: url("../assets/img/green-checkmark.svg");
-      background-repeat: no-repeat;
-      background-position: left .6rem top .4rem;
-      &:nth-child(3n) {
-        border-right: none;
-        padding-right: 0;
+  &:not(._services) {
+    *:not(ul) {
+      max-width: 77rem;
+    }
+
+    ul {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -2rem;
+
+      li {
+        width: calc(100% / 3);
+        margin-top: 2rem;
+        padding: 0 2.2rem;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        background-image: url("../assets/img/green-checkmark.svg");
+        background-repeat: no-repeat;
+        background-position: left .6rem top .4rem;
+        &:nth-child(3n) {
+          border-right: none;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  &._services {
+    max-width: 77rem;
+
+    p {
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+
+    }
+
+    ul {
+      margin: 5.2rem 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      li {
+        margin-bottom: 2rem;
+        color: rgba(0, 0, 0, 0.63);
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }

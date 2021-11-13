@@ -1,5 +1,5 @@
 <div
-  class="detail-hero"
+  class="detail-hero{{ hight ? ' _hight'}}"
   style="
     --hero-img-mobile: url('../assets/img/hero-bg/{{ bgMobile}}');
     --hero-img-desktop: url('../assets/img/hero-bg/{{ bgDesktop}}');
@@ -12,6 +12,10 @@
 
   {% if (text) %}
     <p class="detail-hero__text">{{ text }}</p>
+  {% endif %}
+
+  {% if (orderBtn) %}
+    <a href="#" class="detail-hero__order-btn btn js-open-popup" data-popup-id="order-popup">Оставить заявку</a>
   {% endif %}
   </div>
 </div>

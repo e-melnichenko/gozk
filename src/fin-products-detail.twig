@@ -1,0 +1,54 @@
+{% extends 'templates/base.twig' %}
+
+{% block page %}
+<section class="fin-detail">
+  {% include 'templates/detail-hero.twig' with {
+    title: 'Банковские гарантии',
+    bgMobile: 'fin-products.jpg',
+    bgDesktop: 'fin-products.jpg',
+    orderBtn: true,
+  } %}
+
+  <div class="container">
+  {% set list = [
+    {
+      title: 'Предодобренные решения',
+    },
+    {
+      title: 'Срок рассмотрения заявки  до 30 минут',
+    },
+    {
+      title: 'Диапазон процентных ставок 1,8-4,5 % годовых',
+      desc: 'Ориентировочный диапазон, решение принимается индивидуально в&nbsp;зависимости от&nbsp;оценки финансового состояния заемщика'
+    },
+    {
+      title: 'Электронный документооборот',
+      desc: 'Оформление без посещения Клиентом офиса'
+    },
+    {
+      title: 'Рассмотрение без отчетности гарантий суммой до&nbsp;10&nbsp;млн. руб.',
+    },
+    {
+      title: 'Максимальный лимит 150&nbsp;млн. руб. без залога',
+    },
+  ] %}
+
+    <ul class="fin-detail__list">
+
+    {% for item in list %}
+      <li class="fin-detail__item">
+        <h3 class="fin-detail__item-title">{{ item.title }}</h3>
+
+      {% if (item.desc) %}
+        <p class="fin-detail__item-desc">{{ item.desc }}</p>
+      {% endif %}
+
+      </li>
+    {% endfor %}
+    </ul>
+
+    {% include 'templates/section-nav.twig' %}
+  </div>
+</section>
+
+{% endblock %}

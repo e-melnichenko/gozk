@@ -18,7 +18,7 @@
     {% endif %}
 </head>
 
-<body {{ darkHeader ? 'class="_dark-header"' }}>
+<body class="{{ darkHeader ? '_dark-header' }} {{ pageName == 'main' ? '_main'}}">
 <div class="site-wrap">
   {% include 'header.twig' %}
 

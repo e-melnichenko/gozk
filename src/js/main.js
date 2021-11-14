@@ -6,6 +6,7 @@ import initContactsMap from './modules/contactsMap';
 import initForm from './modules/form';
 import initMask from './modules/mask';
 import Popup from './modules/Popup';
+import initHeader from './modules/header';
 
 svg4everybody();
 
@@ -16,3 +17,4 @@ new CssVars();
 new FsLightbox();
 initForm();
 initMask();
+initHeader();

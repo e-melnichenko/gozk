@@ -2,6 +2,51 @@
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
   width: 100%;
+  min-height: 9rem;
   color: #fff;
+  padding: 0 4rem;
+  z-index: $z2;
+
+  &__logo-link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: auto;
+  }
+
+  &__logo-icon {
+    width: 17.8rem;
+    height: 5.8rem;
+  }
+
+  &__nav {
+    align-items: stretch;
+    margin: 0 auto;
+    align-self: stretch;
+  }
+
+  &__lk-link {
+    display: flex;
+    margin-left: auto;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #12528D;
+  }
+
+  &__lk-text {
+    padding: 1rem;
+  }
+
+  &__lk-icon {
+    background-color: #176FC0;
+    padding: 1rem;
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
 }

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
 
-  <title>Список страниц</title>
+  <title>Default title</title>
 
   <link rel="preload" href="./assets/fonts/Raleway/Raleway-Regular.woff2" as="font" crossorigin="anonymous" />
   <link rel="preload" href="./assets/fonts/Raleway/Raleway-Medium.woff2" as="font" crossorigin="anonymous" />
@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="_dark-header ">
+<body class=" ">
   <div class="site-wrap">
     <header class="header js-header">
       <a href="/" class="header__logo-link">
@@ -135,51 +135,98 @@
     </header>
 
     <main class="site-content">
-      <div class="container" style="margin-bottom: 100px; padding-top: calc(var(--header-height, 9rem) + 3.5rem)">
-        <h1>Список страниц</h1>
+      <section class="categories">
+        <div class="categories__hero" style="
+      --category-img-mobile: url(../assets/img/categories/services-customer.jpg);
+      --category-img-desktop: url(../assets/img/categories/services-customer.jpg);
+    ">
+          <div class="container">
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__arrow"></span>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link">Категория</a>
+                  <span class="breadcrumbs__arrow"></span>
+                </li>
+                <li class="breadcrumbs__item">
+                  <span href="#" class="breadcrumbs__link">Каталог</span>
+                </li>
+              </ul>
+            </div>
 
-        <ul>
-          <li style="margin-bottom: 1rem">
-            <a href="main.html">Главная</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="fin-products.html">Разводящая - Финансовые продукты</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="services-customer.html">Разводящая - Услуги заказчику</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="services-participant.html">Разводящая - Услуги участнику</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="about-content.html">О компании - контентная (миссия, банкам, агентам)</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="docs.html">Документы</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="gallery.html">Фотографии</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="album.html">Альбом</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="contacts.html">Контакты</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="fin-products-detail.html">Финансовые продукты - детальная</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="services-customer-detail.html">Услуги заказчику - детальная</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="services-participant-detail.html">Услуги участнику - детальная</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="privacy-policy.html">Политика конфиденциальности</a>
-          </li>
-        </ul>
-      </div>
+            <h1 class="categories__title title">Услуги заказчику</h1>
+          </div>
+        </div>
+        <div class="categories__list-wrap">
+          <div class="container">
+            <ul class="categories__list">
+
+              <li class="categories__item">
+                <a href="#" class="categories__item-link">
+                  <h3 class="categories__item-title">Расчет и обоснование <br> НМЦ</h3>
+
+
+                  <p class="categories__item-desc">отдельные банковские счета</p>
+
+
+                  <svg class="categories__item-arrow">
+                    <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="categories__item">
+                <a href="#" class="categories__item-link">
+                  <h3 class="categories__item-title">Подготовка закупочной документации</h3>
+
+
+
+                  <svg class="categories__item-arrow">
+                    <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="categories__item">
+                <a href="#" class="categories__item-link">
+                  <h3 class="categories__item-title">Централизация закупочной деятельности</h3>
+
+
+
+                  <svg class="categories__item-arrow">
+                    <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="categories__item">
+                <a href="#" class="categories__item-link">
+                  <h3 class="categories__item-title">Организация и проведение закупки, заключение контракта</h3>
+
+
+
+                  <svg class="categories__item-arrow">
+                    <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="banner">
+        <div class="container">
+          <div class="banner__inner">
+            <h2 class="banner__title">Баннер с призывом к действию</h2>
+            <a href="#" class="banner__order-link btn js-open-popup" data-popup-id="order-popup-1">стать агентом</a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <footer class="footer">

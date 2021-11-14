@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
 
-  <title>Список страниц</title>
+  <title>Default title</title>
 
   <link rel="preload" href="./assets/fonts/Raleway/Raleway-Regular.woff2" as="font" crossorigin="anonymous" />
   <link rel="preload" href="./assets/fonts/Raleway/Raleway-Medium.woff2" as="font" crossorigin="anonymous" />
@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="_dark-header ">
+<body class=" ">
   <div class="site-wrap">
     <header class="header js-header">
       <a href="/" class="header__logo-link">
@@ -135,51 +135,58 @@
     </header>
 
     <main class="site-content">
-      <div class="container" style="margin-bottom: 100px; padding-top: calc(var(--header-height, 9rem) + 3.5rem)">
-        <h1>Список страниц</h1>
+      <section class="about-content">
+        <div class="about-content__hero" style="
+      --category-img-mobile: url(../assets/img/about-content-bg.jpg);
+      --category-img-desktop: url(../assets/img/about-content-bg.jpg);
+    ">
+          <div class="container">
+            <div class="about-content__hero-inner">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">Главная</a><span class="breadcrumbs__arrow"></span>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <a href="#" class="breadcrumbs__link">Категория</a>
+                    <span class="breadcrumbs__arrow"></span>
+                  </li>
+                  <li class="breadcrumbs__item">
+                    <span href="#" class="breadcrumbs__link">Каталог</span>
+                  </li>
+                </ul>
+              </div>
 
-        <ul>
-          <li style="margin-bottom: 1rem">
-            <a href="main.html">Главная</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="fin-products.html">Разводящая - Финансовые продукты</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="services-customer.html">Разводящая - Услуги заказчику</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="services-participant.html">Разводящая - Услуги участнику</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="about-content.html">О компании - контентная (миссия, банкам, агентам)</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="docs.html">Документы</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="gallery.html">Фотографии</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="album.html">Альбом</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="contacts.html">Контакты</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="fin-products-detail.html">Финансовые продукты - детальная</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="services-customer-detail.html">Услуги заказчику - детальная</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="services-participant-detail.html">Услуги участнику - детальная</a>
-          </li>
-          <li style="margin-bottom: 1rem">
-            <a href="privacy-policy.html">Политика конфиденциальности</a>
-          </li>
-        </ul>
-      </div>
+              <h1 class="about-content__title">Банкам</h1>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="content">
+            <h2>Подзаголовок второго уровня</h2>
+            <p>Если говорить простыми словами, то банковская гарантия – это обещание банка заплатить оговоренную сумму долга за клиента, если тот не сделает этого.</p>
+            <p>Предоставление банковской гарантии обеспечивает безопасность сделки для того, кто получит деньги (бенефициара) и сделает возможным сделку для того, у кого проблемы с финансами (принципал).</p>
+            <p>До 2015 года выступать гарантом мог только банк, но сегодня в обиход введён новый термин «независимая гарантия». Такое обязательство может взять на себя любая коммерческая организация.</p>
+            <h3>Подзаголовок третьего уровня</h3>
+            <ul>
+              <li>Предоставление банковской гарантии обеспечивает безопасность сделки для того, кто получит деньги (бенефициара) </li>
+              <li>Предоставление банковской гарантии обеспечивает безопасность сделки для того, кто получит деньги (бенефициара) </li>
+              <li>Предоставление банковской гарантии обеспечивает безопасность сделки для того, кто получит деньги (бенефициара) </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="banner">
+        <div class="container">
+          <div class="banner__inner">
+            <h2 class="banner__title">Баннер с призывом к действию</h2>
+            <a href="#" class="banner__order-link btn js-open-popup" data-popup-id="order-popup-1">стать агентом</a>
+          </div>
+        </div>
+      </section>
+
+
     </main>
 
     <footer class="footer">

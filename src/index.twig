@@ -2,6 +2,8 @@
 
 {% block title %}Список страниц{% endblock %}
 
+{% set darkHeader = true %}
+
 {% block page %}
     {%
       set pagesList = [
@@ -60,7 +62,7 @@
       ]
     %}
 
-    <div class="container" style="margin-bottom: 100px">
+    <div class="container" style="margin-bottom: 100px; padding-top: calc(var(--header-height, 9rem) + 3.5rem)">
       <h1>{{ block("title") }}</h1>
 
       <ul>

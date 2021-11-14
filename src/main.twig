@@ -15,7 +15,7 @@
             <h2 class="hero__title">{{ loop.index }}Получите кэшбэк от стоимости банковской гарантии</h2>
             <div class="hero__bottom">
               <p class="hero__desc">При условии самостоятельного оформления через личный кабинет, на любой счет, указанный при регистрации</p>
-              <a href="#" class="hero__order-btn btn">Получить</a>
+              <a href="#" class="hero__order-btn btn js-open-popup" data-popup-id="order-popup-{{ i }}">Получить</a>
             </div>
           </li>
         {% endfor %}
@@ -23,6 +23,7 @@
       </div>
     </div>
   </div>
+
 </section>
 
 <section class="mission section">

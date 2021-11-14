@@ -147,6 +147,248 @@
         <h3 class="title popup__title _centered">Что-то пошло не так.</h3>
       </div>
     </div>
+
+    <div class="popup js-popup" id="success-popup">
+      <button class="popup__close-btn js-close-popup" type="button">
+        <svg>
+          <use xlink:href="assets/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <h3 class="title popup__title _centered">Ваша заявка отправлена.</h3>
+      </div>
+    </div>
+
+    <div class="popup js-popup" id="order-popup-1">
+      <button class="popup__close-btn js-close-popup" type="button">
+        <svg>
+          <use xlink:href="assets/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <h3 class="popup__title _centered">Заголовок заявки 1</h3>
+        <form class="form _popup js-form" action="action" data-name="order">
+          <div class="popup__form-fields">
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Имя" class="form__text-input js-required" name="name" data-name="name">
+            </div>
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Email" class="form__text-input js-required" name="email" data-name="email">
+            </div>
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Номер счета" class="form__text-input js-required" name="account-number" data-name="name">
+            </div>
+            <div class="form__item js-form-item">
+              <label class="form__file-label">
+                <input type="file" placeholder="Прикрепить скан" class="visually-hidden js-file-input js-required" name="account-number" accept="image/*,.pdf">
+                <span class="form__file-text js-text" data-default="Прикрепить скан"></span>
+                <svg class="form__file-icon">
+                  <use xlink:href="assets/sprite.svg#file"></use>
+                </svg>
+              </label>
+              <button class="form__file-remove js-remove-file" type="button">
+                <svg>
+                  <use xlink:href="assets/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="popup__submit-btn btn" type="submit">Отправить</button>
+          <div class="form__policy">
+            <label class="form__checkbox js-form-item">
+              <input class="form__checkbox-input js-required" type="checkbox" name="privacy-policy">
+              <span class="form__checkbox-text">
+            <span>Нажимая кнопку “отправить” я даю согласие на обработку персональных данных в соответсвие с <a href="#" target="_blank" class="form__policy-link">политикой конфиденциальности</a></span>
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup js-popup" id="order-popup-2">
+      <button class="popup__close-btn js-close-popup" type="button">
+        <svg>
+          <use xlink:href="assets/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <h3 class="popup__title _centered">Заголовок заявки 2</h3>
+        <form class="form _popup js-form" action="action" data-name="order">
+          <div class="popup__form-fields">
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Имя" class="form__text-input js-required" name="name" data-name="name">
+            </div>
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Email" class="form__text-input js-required" name="email" data-name="email">
+            </div>
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Номер счета" class="form__text-input js-required" name="account-number" data-name="name">
+            </div>
+            <div class="form__item js-form-item">
+              <label class="form__file-label">
+                <input type="file" placeholder="Прикрепить скан" class="visually-hidden js-file-input js-required" name="account-number" accept="image/*,.pdf">
+                <span class="form__file-text js-text" data-default="Прикрепить скан"></span>
+                <svg class="form__file-icon">
+                  <use xlink:href="assets/sprite.svg#file"></use>
+                </svg>
+              </label>
+              <button class="form__file-remove js-remove-file" type="button">
+                <svg>
+                  <use xlink:href="assets/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="popup__submit-btn btn" type="submit">Отправить</button>
+          <div class="form__policy">
+            <label class="form__checkbox js-form-item">
+              <input class="form__checkbox-input js-required" type="checkbox" name="privacy-policy">
+              <span class="form__checkbox-text">
+            <span>Нажимая кнопку “отправить” я даю согласие на обработку персональных данных в соответсвие с <a href="#" target="_blank" class="form__policy-link">политикой конфиденциальности</a></span>
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup js-popup" id="order-popup-3">
+      <button class="popup__close-btn js-close-popup" type="button">
+        <svg>
+          <use xlink:href="assets/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <h3 class="popup__title _centered">Заголовок заявки 3</h3>
+        <form class="form _popup js-form" action="action" data-name="order">
+          <div class="popup__form-fields">
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Имя" class="form__text-input js-required" name="name" data-name="name">
+            </div>
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Email" class="form__text-input js-required" name="email" data-name="email">
+            </div>
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Номер счета" class="form__text-input js-required" name="account-number" data-name="name">
+            </div>
+            <div class="form__item js-form-item">
+              <label class="form__file-label">
+                <input type="file" placeholder="Прикрепить скан" class="visually-hidden js-file-input js-required" name="account-number" accept="image/*,.pdf">
+                <span class="form__file-text js-text" data-default="Прикрепить скан"></span>
+                <svg class="form__file-icon">
+                  <use xlink:href="assets/sprite.svg#file"></use>
+                </svg>
+              </label>
+              <button class="form__file-remove js-remove-file" type="button">
+                <svg>
+                  <use xlink:href="assets/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="popup__submit-btn btn" type="submit">Отправить</button>
+          <div class="form__policy">
+            <label class="form__checkbox js-form-item">
+              <input class="form__checkbox-input js-required" type="checkbox" name="privacy-policy">
+              <span class="form__checkbox-text">
+            <span>Нажимая кнопку “отправить” я даю согласие на обработку персональных данных в соответсвие с <a href="#" target="_blank" class="form__policy-link">политикой конфиденциальности</a></span>
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup js-popup" id="order-popup-4">
+      <button class="popup__close-btn js-close-popup" type="button">
+        <svg>
+          <use xlink:href="assets/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <h3 class="popup__title _centered">Заголовок заявки 4</h3>
+        <form class="form _popup js-form" action="action" data-name="order">
+          <div class="popup__form-fields">
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Имя" class="form__text-input js-required" name="name" data-name="name">
+            </div>
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Email" class="form__text-input js-required" name="email" data-name="email">
+            </div>
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Номер счета" class="form__text-input js-required" name="account-number" data-name="name">
+            </div>
+            <div class="form__item js-form-item">
+              <label class="form__file-label">
+                <input type="file" placeholder="Прикрепить скан" class="visually-hidden js-file-input js-required" name="account-number" accept="image/*,.pdf">
+                <span class="form__file-text js-text" data-default="Прикрепить скан"></span>
+                <svg class="form__file-icon">
+                  <use xlink:href="assets/sprite.svg#file"></use>
+                </svg>
+              </label>
+              <button class="form__file-remove js-remove-file" type="button">
+                <svg>
+                  <use xlink:href="assets/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="popup__submit-btn btn" type="submit">Отправить</button>
+          <div class="form__policy">
+            <label class="form__checkbox js-form-item">
+              <input class="form__checkbox-input js-required" type="checkbox" name="privacy-policy">
+              <span class="form__checkbox-text">
+            <span>Нажимая кнопку “отправить” я даю согласие на обработку персональных данных в соответсвие с <a href="#" target="_blank" class="form__policy-link">политикой конфиденциальности</a></span>
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup js-popup" id="order-popup-5">
+      <button class="popup__close-btn js-close-popup" type="button">
+        <svg>
+          <use xlink:href="assets/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <h3 class="popup__title _centered">Заголовок заявки 5</h3>
+        <form class="form _popup js-form" action="action" data-name="order">
+          <div class="popup__form-fields">
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Имя" class="form__text-input js-required" name="name" data-name="name">
+            </div>
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Email" class="form__text-input js-required" name="email" data-name="email">
+            </div>
+            <div class="form__item js-form-item">
+              <input type="text" placeholder="Номер счета" class="form__text-input js-required" name="account-number" data-name="name">
+            </div>
+            <div class="form__item js-form-item">
+              <label class="form__file-label">
+                <input type="file" placeholder="Прикрепить скан" class="visually-hidden js-file-input js-required" name="account-number" accept="image/*,.pdf">
+                <span class="form__file-text js-text" data-default="Прикрепить скан"></span>
+                <svg class="form__file-icon">
+                  <use xlink:href="assets/sprite.svg#file"></use>
+                </svg>
+              </label>
+              <button class="form__file-remove js-remove-file" type="button">
+                <svg>
+                  <use xlink:href="assets/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="popup__submit-btn btn" type="submit">Отправить</button>
+          <div class="form__policy">
+            <label class="form__checkbox js-form-item">
+              <input class="form__checkbox-input js-required" type="checkbox" name="privacy-policy">
+              <span class="form__checkbox-text">
+            <span>Нажимая кнопку “отправить” я даю согласие на обработку персональных данных в соответсвие с <a href="#" target="_blank" class="form__policy-link">политикой конфиденциальности</a></span>
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 
   <script src="./js/main.js"></script>

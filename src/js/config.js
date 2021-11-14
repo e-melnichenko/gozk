@@ -33,7 +33,12 @@ export const PLACEMARKS = [
 export const FORMS = {
   'feedback': {
     onSuccess() {
-      Popup.open('feedback-success-popup')
+      Popup.open('success-popup')
+    }
+  },
+  'order': {
+    onSuccess() {
+      Popup.open('success-popup')
     }
   }
 }

@@ -2,25 +2,6 @@ import { FORMS } from "../config";
 import Popup from "./Popup";
 
 export default function initForm() {
-  // const config = {
-  //   "add-to-cart": {
-  //     onSuccess() {
-  //       Popup.open('order-success-popup');
-  //       HeaderCart.update();
-  //     },
-  //   },
-  //   "call-back-success-popup": {
-  //     onSuccess() {
-  //       Popup.open('call-back-success-popup')
-  //     },
-  //   },
-  //   "feedback-success-popup": {
-  //     onSuccess() {
-  //       Popup.open('feedback-success-popup')
-  //     },
-  //   },
-  // }
-
   document.addEventListener('submit', async function(e) {
     const form = e.target.closest('.js-form');
     if(!form) return
@@ -36,10 +17,10 @@ export default function initForm() {
     form.classList.add('_loading');
 
     try {
-      const res = await fetch(
-        action,
-        { method: 'post', body: formData }
-      )
+      const res = await fetch( action, {
+         method: 'post',
+         body: formData
+      });
       const data = res.json();
 
       if(data.success !== true) {
@@ -61,7 +42,10 @@ export default function initForm() {
     if(!target) return
 
     removeError(target);
-  })
+  });
+
+  document.addEventListener('change', onFileInputChange);
+  document.addEventListener('click', onRemoveFileClick)
 }
 
 const regexp = {
@@ -79,7 +63,8 @@ function isFormCorrect(form) {
 
     if (
       input.type === 'checkbox' && input.checked ||
-      ['text', 'textarea'].includes(input.type) && regexp[inputName].test(input.value.trim())
+      ['text', 'textarea'].includes(input.type) && regexp[inputName].test(input.value.trim()) ||
+      input.type === 'file' && input.files[0]
     ) {
       return
     }
@@ -97,4 +82,26 @@ function addError(input) {
 
 function removeError(input) {
   input.closest('.js-form-item').classList.remove('_error');
+}
+
+function onFileInputChange(e) {
+  const target = e.target.closest('.js-file-input');
+  if(!target) return
+
+  const formItem = target.closest('.js-form-item');
+  const fileName = e.target.files[0].name;
+
+  formItem.classList.add('_filled');
+  formItem.querySelector('.js-text').textContent = fileName;
+}
+
+function onRemoveFileClick(e) {
+  const target = e.target.closest('.js-remove-file');
+  if(!target) return
+
+  const formItem = target.closest('.js-form-item');
+
+  formItem.querySelector('.js-file-input').value = null;
+  formItem.querySelector('.js-text').textContent = null;
+  formItem.classList.remove('_filled');
 }

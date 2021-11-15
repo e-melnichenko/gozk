@@ -46,7 +46,7 @@
     fill: none;
     stroke: #fff;
     margin-left: 0.4rem;
-    transition: all .3s;
+    transition: stroke .3s, transform .6s;
   }
 
   &__nested-list,

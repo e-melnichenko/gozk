@@ -56,6 +56,9 @@
       &__link {
         color: #313131;
       }
+      &__link-icon {
+        stroke: #313131;
+      }
 
       &__nested-list{
         left: 2rem;
@@ -72,14 +75,16 @@
       }
     }
   }
+
+  .tooltip {
+    background-color: #12528D;
+    color: #fff;
+  }
 }
 
 ._dark-header {
   .header {
     background-color: #23394E;
-
-    &__ {
-    }
   }
 
   .main-nav {
@@ -143,5 +148,10 @@
     &__arrow::after {
       background-color: $color-main;
     }
+  }
+
+  .tooltip {
+    background-color: #12528D;
+    color: #fff;
   }
 }

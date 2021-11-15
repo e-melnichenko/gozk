@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 10rem 0;
 
-  h2, h3, p, ul {
+  h2, h3, p, ul, video {
     margin: 0;
     margin-bottom: 3.2rem;
     &:last-child {
@@ -39,6 +39,9 @@
     letter-spacing: 0.03em;
   }
 
+  video {
+    max-width: 100%;
+  }
 
   &:not(._services) {
     *:not(ul) {

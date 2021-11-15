@@ -7,6 +7,7 @@ import initForm from './modules/form';
 import initMask from './modules/mask';
 import Popup from './modules/Popup';
 import initHeader from './modules/header';
+import initTooltip from './modules/tooltip';
 
 svg4everybody();
 
@@ -18,3 +19,4 @@ new FsLightbox();
 initForm();
 initMask();
 initHeader();
+initTooltip();

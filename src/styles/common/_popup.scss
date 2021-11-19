@@ -5,8 +5,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   max-height: calc(var(--vh, 1vh) * 100 - 4rem);
-  padding: 5rem 5.4rem;
-  padding-top: 6.8rem;
+  padding: 3.2rem 2.4rem;
+  padding-top: 4.8rem;
   z-index: $z1;
   background-color: #fff;
   overflow: auto;
@@ -16,6 +16,8 @@
   color: #000;
   @include breakpoint($tablet-width) {
     width: 60rem;
+    padding: 5rem 5.4rem;
+    padding-top: 6.8rem;
   }
 
   &._active {
@@ -52,19 +54,23 @@
   }
 
   &__form-fields {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -2rem;
-    margin-right: -2rem;
     margin-bottom: 2rem;
 
-    .form {
-      &__item {
-        width: calc(50% - 2rem);
-        margin: 0;
-        margin-top: 2rem;
-        margin-right: 2rem;
+    @include breakpoint($desktop-width) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -2rem;
+      margin-right: -2rem;
+
+      .form {
+        &__item {
+          width: calc(50% - 2rem);
+          margin: 0;
+          margin-top: 2rem;
+          margin-right: 2rem;
+        }
       }
+
     }
   }
 

@@ -5,10 +5,14 @@
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 9rem;
+  min-height: 8.3rem;
   color: #fff;
-  padding: 0 4rem;
+  padding: 0 var(--container-padding, 2rem);
   z-index: $z2;
+  @include breakpoint($desktop-width) {
+    min-height: 9rem;
+    padding: 0 4rem;
+  }
 
   &__logo-link {
     text-decoration: none;
@@ -17,36 +21,109 @@
   }
 
   &__logo-icon {
-    width: 17.8rem;
-    height: 5.8rem;
+    width: 10.7rem;
+    height: 3.5rem;
+    margin-right: 1rem;
+    @include breakpoint($desktop-width) {
+      width: 17.8rem;
+      height: 5.8rem;
+    }
   }
 
   &__nav {
-    align-items: stretch;
-    margin: 0 auto;
-    align-self: stretch;
+    position: fixed;
+    top: var(--header-height, 8.3rem);
+    left: var(--container-padding, 2rem);
+    right: var(--container-padding, 2rem);
+    height: calc(100 * var(--vh, 1vh) - var(--header-height, 8.3rem));
+    overflow: auto;
+    @include breakpoint($desktop-width) {
+      position: static;
+      align-items: stretch;
+      margin: 0 auto;
+      align-self: stretch;
+      height: auto;
+    }
   }
 
   &__lk-link {
-    display: flex;
-    margin-left: auto;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    text-decoration: none;
+    position: relative;
+    margin-right: 4.4rem;
     color: #fff;
-    background-color: #12528D;
+    &::after {
+      content: '';
+      position: absolute;
+      right: -2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 4rem;
+      background-color: currentColor;
+    }
+    @include breakpoint($desktop-width) {
+      display: flex;
+      margin-left: auto;
+      margin-right: 0;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: #fff;
+      text-decoration: none;
+      background-color: #12528D;
+      border-radius: .4rem;
+      overflow: hidden;
+      &::after {
+        display: none;
+      }
+    }
   }
 
   &__lk-text {
-    padding: 1rem;
+    display: none;
+    @include breakpoint($desktop-width) {
+      display: inline;
+      padding: 1rem;
+    }
   }
 
   &__lk-icon {
-    background-color: #176FC0;
-    padding: 1rem;
     svg {
-      width: 1.6rem;
-      height: 1.6rem;
+      width: 2.4rem;
+      height: 2.4rem;
     }
+    @include breakpoint($desktop-width) {
+      background-color: #176FC0;
+      padding: 1rem;
+      svg {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  }
+
+  &__menu-toggle {
+    @include btn-reset();
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    @include breakpoint($desktop-width) {
+      display: none;
+    }
+  }
+
+  &__menu-open {
+    width: 4rem;
+    height: 2rem;
+  }
+
+  &__menu-close {
+    width: 3rem;
+    height: 3rem;
+    stroke-width: 1.6px;
+    stroke: #fff;
+    display: none;
   }
 }

@@ -1,11 +1,17 @@
 .mission {
   &__inner {
-    display: flex;
+    @include breakpoint($desktop-width) {
+      display: flex;
+    }
   }
 
   &__title-wrap {
-    flex-shrink: 0;
-    margin-right: 7.4rem;
+    margin-bottom: 3rem;
+    @include breakpoint($desktop-width) {
+      flex-shrink: 0;
+      margin: 0;
+      margin-right: 7.4rem;
+    }
   }
 
   &__subtitle {
@@ -20,19 +26,24 @@
   }
 
   &__list {
-    display: flex;
-    margin-right: -2rem;
+    @include breakpoint($desktop-width) {
+      display: flex!important;
+      margin-right: -2rem!important;
+    }
   }
 
   &__item {
     position: relative;
     overflow: hidden;
-    width: calc(100% / 3 - 2rem);
-    margin-right: 2rem;
     padding: 3rem 2.8rem;
     padding-right: 2rem;
     background: #ECF2F8;
     border-radius: 4px;
+    @include breakpoint($desktop-width) {
+      width: calc(100% / 3 - 2rem);
+      margin-right: 2rem;
+    }
+
     > * {
       position: relative;
       z-index: 1;
@@ -80,5 +91,11 @@
     line-height: 1.4;
     letter-spacing: 0.03em;
     color: #383838;
+  }
+
+  .splide {
+    &__track {
+      margin: 0 -2rem;
+    }
   }
 }

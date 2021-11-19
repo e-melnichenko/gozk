@@ -9,9 +9,9 @@ export default class Slider {
   _init() {
     document.querySelectorAll('.js-slider').forEach(slider => {
       const name = slider.dataset.name;
-      const splide = new Splide(slider, SLIDERS[name].options);
+      const splide = new Splide(slider, SLIDERS[name]?.options);
 
-      this._addCallbacks(splide, SLIDERS[name].callbacks);
+      this._addCallbacks(splide, SLIDERS[name]?.callbacks);
 
       splide.mount();
 
@@ -30,7 +30,7 @@ export default class Slider {
     })
   }
 
-  _addCallbacks(slider, callbacks) {
+  _addCallbacks(slider, callbacks={}) {
     Object.entries(callbacks).forEach(([cbName, cbFn]) => {
       slider.on(cbName, () => cbFn(slider));
     })

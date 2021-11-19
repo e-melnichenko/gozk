@@ -2,20 +2,20 @@
 ._menu-open {
   overflow: hidden;
 
-  .header {
-    &__mobile-menu {
-      top: var(--header-height, 6rem);
-      transform: none;
-    }
+  .main-nav {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+    transition: opacity .3s;
+  }
 
-    // &__toggle-inner {
-    //   &._menu-opened {
-    //     display: flex;
-    //   }
-    //   &._menu-closed {
-    //     display: none;
-    //   }
-    // }
+  .header {
+    &__menu-open {
+      display: none;
+    }
+    &__menu-close {
+      display: block;
+    }
   }
 }
 
@@ -48,8 +48,20 @@
     background: #FFFFFF;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 
-    &__logo-link {
+    &__logo-link,
+    &__menu-toggle {
       color: #12528D;
+    }
+
+    &__menu-close {
+      stroke: #12528d;
+    }
+
+    &__lk-link {
+      color: #12528D;
+      @include breakpoint($desktop-width) {
+        color: #fff;
+      }
     }
 
     .main-nav {
@@ -64,14 +76,18 @@
         left: 2rem;
         width: 100%;
         border-radius: 0;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        @include breakpoint($desktop-width) {
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
       }
 
       &__double {
         left: 0;
         width: 100%;
         border-radius: 0;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        @include breakpoint($desktop-width) {
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
       }
     }
   }
@@ -88,6 +104,7 @@
   }
 
   .main-nav {
+    background-color: #23394E;
     &__item {
       @include hover() {
         .main-nav {
@@ -101,11 +118,17 @@
       }
     }
 
+    &__link {
+      color: #fff;
+    }
+
     &__nested-list {
       background-color: #23394E;
       left: 2rem;
       width: 100%;
       border-radius: 0;
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     &__double {
@@ -113,6 +136,8 @@
       left: 0;
       width: 100%;
       border-radius: 0;
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     &__double-section {
@@ -121,6 +146,8 @@
 
     &__double-title {
       color: #fff;
+      font-weight: 700;
+      font-size: 1.8rem;
     }
 
     &__double-link {
@@ -153,5 +180,24 @@
   .tooltip {
     background-color: #12528D;
     color: #fff;
+  }
+}
+
+._colored-header,
+._dark-header {
+  .header {
+    &__nav {
+      top: calc(var(--header-height, 8.3rem) + 1.6rem);
+      height: calc(100 * var(--vh, 1vh) - var(--header-height, 8.3rem) - 1.6rem);
+      @include breakpoint($desktop-width) {
+        height: auto;
+      }
+    }
+  }
+}
+
+._resizing {
+  * {
+    transition: none!important;
   }
 }

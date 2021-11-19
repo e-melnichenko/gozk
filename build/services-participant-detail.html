@@ -128,10 +128,16 @@
           </li>
         </ul>
       </nav>
-      <a href="#" class="header__lk-link">
-        <span class="header__lk-icon"><svg><use xlink:href="assets/sprite.svg#lock"></use></svg></span>
-        <span class="header__lk-text">Личный кабинет</span>
-      </a>
+      <div class="test">
+        <a href="#" class="header__lk-link js-lk-btn" aria-describedby="tooltip">
+          <span class="header__lk-icon"><svg><use xlink:href="assets/sprite.svg#lock"></use></svg></span>
+          <span class="header__lk-text">Личный кабинет</span>
+        </a>
+        <div class="tooltip js-lk-tooltip" role="tooltip">
+          Личный кабинет скоро появится
+          <div class="tooltip__arrow" data-popper-arrow></div>
+        </div>
+      </div>
     </header>
 
     <main class="site-content">

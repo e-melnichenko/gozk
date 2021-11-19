@@ -8,6 +8,8 @@ import initMask from './modules/mask';
 import Popup from './modules/Popup';
 import initHeader from './modules/header';
 import initTooltip from './modules/tooltip';
+import initToggleMenu from './modules/toggleMenu';
+import blockResizeTransition from './modules/blockResizeTransition';
 
 svg4everybody();
 
@@ -20,3 +22,5 @@ initForm();
 initMask();
 initHeader();
 initTooltip();
+initToggleMenu();
+blockResizeTransition();

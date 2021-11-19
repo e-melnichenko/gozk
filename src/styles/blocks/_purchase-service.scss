@@ -1,10 +1,15 @@
 .purchase-service {
-  margin-bottom: 12rem;
-
   &__title-wrap {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+    @include breakpoint($desktop-width) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2rem;
   }
 
   &__section-link {
@@ -24,50 +29,60 @@
   }
 
   &__wrap {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -2rem;
-    margin-right: -2rem;
+    @include breakpoint($desktop-width) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -2rem;
+      margin-right: -2rem;
+    }
   }
 
   &__card {
-    position: relative;
-    width: calc(50% - 2rem);
-    margin-right: 2rem;
-    margin-top: 2rem;
-    padding: 4rem;
-    padding-bottom: 5.4rem;
-    padding-right: 20rem;
+    margin-bottom: 2rem;
+    padding: 2.4rem;
+    padding-bottom: 3rem;
     background-color: #F5F5F5;
     border-radius: 8px;
     overflow: hidden;
-    &::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 28rem;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
+    @include breakpoint($desktop-width) {
+      position: relative;
+      width: calc(50% - 2rem);
+      margin-right: 2rem;
+      margin-top: 2rem;
+      padding: 4rem;
+      padding-right: 20rem;
+      padding-bottom: 5.4rem;
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 28rem;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      &._customer::after {
+        background-image: url("../assets/img/customer.png");
+      }
+      &._participant::after {
+        background-image: url("../assets/img/participant.png");
+      }
     }
 
-    &._customer::after {
-      background-image: url("../assets/img/customer.png");
-    }
-    &._participant::after {
-      background-image: url("../assets/img/participant.png");
-    }
   }
 
   &__card-title {
     margin: 0;
-    margin-bottom: 3.6rem;
+    margin-bottom: 2.4rem;
     font-size: 2.4rem;
     line-height: 2.8rem;
     font-weight: 500;
     letter-spacing: 0.03em;
     color: #142330;
+    @include breakpoint($desktop-width) {
+      margin-bottom: 3.6rem;
+    }
   }
 
   &__item {

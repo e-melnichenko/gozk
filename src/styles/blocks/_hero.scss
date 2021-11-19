@@ -1,19 +1,25 @@
 .hero {
   min-height: calc(100 * var(--vh, 1vh));
   color: #fff;
-  background-image: url("../assets/img/hero-bg/main.jpg");
+  background-image: url("../assets/img/hero-bg/main-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  @include breakpoint($tablet-width) {
+    background-image: url("../assets/img/hero-bg/main-desktop.jpg");
+  }
 
   &__list {}
 
   &__item {
-    min-height: calc(100 * var(--vh, 1vh) - 5rem);
+    min-height: calc(100 * var(--vh, 1vh));
     padding-top: var(--header-height);
     padding-bottom: 10.8rem;
     display: flex;
     flex-direction: column;
+    @include breakpoint($desktop-width) {
+      min-height: calc(100 * var(--vh, 1vh) - 5rem);
+    }
   }
 
   &__title {
@@ -21,9 +27,14 @@
     margin-top: auto;
     margin-bottom: 2rem;
     max-width: 75.8rem;
-    font-size: 6rem;
-    line-height: 7rem;
-    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    font-weight: 600;
+    @include breakpoint($desktop-width) {
+      font-size: 6rem;
+      line-height: 7rem;
+      font-weight: 500;
+    }
   }
 
   &__bottom {
@@ -34,9 +45,14 @@
     max-width: 80rem;
     margin: 0;
     margin-bottom: 2rem;
-    font-size: 2.4rem;
-    line-height: 1.3;
-    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.03em;
+    @include breakpoint($desktop-width) {
+      font-size: 2.4rem;
+      line-height: 1.3;
+      font-weight: 500;
+    }
   }
 
   &__order-btn {

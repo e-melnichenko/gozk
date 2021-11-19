@@ -3,32 +3,52 @@
 
   &__top {
     background-color: #0B2236;
-    padding: 7rem 0;
+    @include breakpoint($desktop-width) {
+      padding: 7rem 0;
+    }
   }
 
   &__top-inner {
-    display: flex;
+    @include breakpoint($desktop-width) {
+      display: flex;
+    }
   }
 
   &__section {
-    flex-grow: 1;
-    width: 24%;
-    min-width: 26rem;
-    padding: 0 3rem;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    &:first-child {
-      padding-left: 0;
+    padding: 1.5rem 0;
+
+    &:nth-child(2) {
+      padding-top: 6rem;
     }
+
     &:last-child {
-      padding-right: 0;
-      border: none;
+      padding-bottom: 6rem;
     }
 
     &._logo {
-      width: 22%;
+      padding: 6rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
-    &._address {
-      width: 30%;
+    @include breakpoint($desktop-width) {
+      flex-grow: 1;
+      width: 24%;
+      min-width: 26rem;
+      padding: 0 3rem;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        border: none;
+      }
+
+      &._logo {
+        width: 22%;
+      }
+      &._address {
+        width: 30%;
+      }
     }
   }
 
@@ -73,15 +93,21 @@
   }
 
   &__bottom-inner {
-    display: flex;
-    justify-content: space-between;
+    @include breakpoint($desktop-width) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__bottom-text {
     margin: 0;
+    margin-bottom: 2.4rem;
     color: rgba(255, 255, 255, 0.7);
     font-size: 1.4rem;
     line-height: 1.6rem;
     text-decoration: none;
+    @include breakpoint($desktop-width) {
+      margin: 0;
+    }
   }
 }

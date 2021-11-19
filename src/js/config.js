@@ -12,9 +12,31 @@ export const SLIDERS = {
     options: {
       type: 'fade',
       rewind: true,
+      mediaQuery: 'min',
+      arrows: false,
+      breakpoints: {
+        [BREAKPOINTS.desktop]: {
+          arrows: true
+        }
+      }
     },
     callbacks: {},
   },
+  'mission': {
+    options: {
+      pagination: false,
+      arrows: false,
+      fixedWidth: '28rem',
+      gap: '2rem',
+      padding: '2rem',
+      mediaQuery: 'min',
+      breakpoints: {
+        [BREAKPOINTS.desktop]: {
+          destroy: true,
+        }
+      }
+    }
+  }
 }
 
 export const PLACEMARKS = [

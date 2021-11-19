@@ -128,10 +128,16 @@
           </li>
         </ul>
       </nav>
-      <a href="#" class="header__lk-link">
-        <span class="header__lk-icon"><svg><use xlink:href="assets/sprite.svg#lock"></use></svg></span>
-        <span class="header__lk-text">Личный кабинет</span>
-      </a>
+      <div class="test">
+        <a href="#" class="header__lk-link js-lk-btn" aria-describedby="tooltip">
+          <span class="header__lk-icon"><svg><use xlink:href="assets/sprite.svg#lock"></use></svg></span>
+          <span class="header__lk-text">Личный кабинет</span>
+        </a>
+        <div class="tooltip js-lk-tooltip" role="tooltip">
+          Личный кабинет скоро появится
+          <div class="tooltip__arrow" data-popper-arrow></div>
+        </div>
+      </div>
     </header>
 
     <main class="site-content">
@@ -156,7 +162,6 @@
                   </li>
                 </ul>
               </div>
-
               <h1 class="about-content__title">Банкам</h1>
             </div>
           </div>
@@ -164,6 +169,7 @@
         <div class="container">
           <div class="content">
             <h2>Подзаголовок второго уровня</h2>
+            <video src="assets/img/optimized.mp4" controls></video>
             <p>Если говорить простыми словами, то банковская гарантия – это обещание банка заплатить оговоренную сумму долга за клиента, если тот не сделает этого.</p>
             <p>Предоставление банковской гарантии обеспечивает безопасность сделки для того, кто получит деньги (бенефициара) и сделает возможным сделку для того, у кого проблемы с финансами (принципал).</p>
             <p>До 2015 года выступать гарантом мог только банк, но сегодня в обиход введён новый термин «независимая гарантия». Такое обязательство может взять на себя любая коммерческая организация.</p>
@@ -185,7 +191,6 @@
           </div>
         </div>
       </section>
-
 
     </main>
 

@@ -10,18 +10,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 41rem;
+    min-height: 37rem;
     padding: 4rem 0;
+    @include breakpoint($desktop-width) {
+      min-height: 41rem;
+    }
   }
 
   &__title {
-    margin-bottom: 4rem;
+    margin: 0;
+    margin-bottom: 3rem;
     font-weight: 600;
-    font-size: 4.2rem;
-    line-height: 4.9rem;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
     color: #FFFFFF;
+    text-align: center;
+    @include breakpoint($desktop-width) {
+      margin-bottom: 4rem;
+      font-size: 4.2rem;
+      line-height: 4.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
   }
 
   &__order-link {

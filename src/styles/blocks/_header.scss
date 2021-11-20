@@ -86,6 +86,8 @@
   }
 
   &__lk-icon {
+    display: flex;
+    align-items: center;
     svg {
       width: 2.4rem;
       height: 2.4rem;

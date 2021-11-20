@@ -3,65 +3,65 @@
   margin-bottom: 8rem;
 
   &__title {
-    margin: 0;
-    margin-bottom: 2.2rem;
-    font-size: 6rem;
-    line-height: 7rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
     color: #313131;
+    margin-bottom: 3rem;
+    @include breakpoint($desktop-width) {
+      margin-bottom: 2.2rem;
+      font-size: 6rem;
+      line-height: 7rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
   }
 
   &__company-type {
     margin: 0;
-    margin-bottom: .5rem;
+    margin-bottom: 1.5rem;
     font-size: 1.7rem;
     line-height: 2rem;
     font-weight: 500;
     letter-spacing: 0.03em;
     color: rgba(0, 0, 0, 0.5);
+    @include breakpoint($desktop-width) {
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__company-name {
     margin: 0;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     font-size: 2.4rem;
     line-height: 2.8rem;
     letter-spacing: 0.03em;
+    @include breakpoint($desktop-width) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__list {
-    margin-bottom: 8rem;
-    display: grid;
-    grid-template-areas:
-      "address address phone social"
-      "email details working-hours working-hours"
-    ;
-    grid-column-gap: 5.4rem;
-    grid-row-gap: 4rem;
-    padding: 2rem;
+    margin-bottom: 6rem;
+    padding: 2.5rem;
     background: #ECF2F8;
     border-radius: 8px;
+    @include breakpoint($desktop-width) {
+      margin-bottom: 8rem;
+      display: grid;
+      grid-template-areas:
+        "address address phone social"
+        "email details working-hours working-hours"
+      ;
+      grid-column-gap: 5.4rem;
+      grid-row-gap: 4rem;
+      padding: 2rem;
+    }
   }
 
   &__item {
-    &._address {
-      grid-area: address;
-    }
-    &._phone {
-      grid-area: phone;
-    }
-    &._social {
-      grid-area: social;
-      display: flex;
-      align-items: flex-start;
-    }
-    &._email {
-      grid-area: email;
+    margin-bottom: 3rem;
+    &:last-child {
+      margin-bottom: 0;
     }
     &._details {
-      grid-area: details;
-
       .contacts__item-value {
         display: inline-flex;
         align-items: center;
@@ -75,8 +75,29 @@
         }
       }
     }
-    &._working-hours {
-      grid-area: working-hours;
+    @include breakpoint($desktop-width) {
+      margin-bottom: 0;
+      &._address {
+        grid-area: address;
+      }
+      &._phone {
+        grid-area: phone;
+      }
+      &._social {
+        grid-area: social;
+        display: flex;
+        align-items: flex-start;
+      }
+      &._email {
+        grid-area: email;
+      }
+      &._details {
+        grid-area: details;
+      }
+      &._working-hours {
+        grid-area: working-hours;
+      }
+
     }
   }
 
@@ -107,7 +128,11 @@
   }
 
   &__social-wrap {
-    margin-right: 2.3rem;
+    margin-bottom: 1.5rem;
+    @include breakpoint($desktop-width) {
+      margin: 0;
+      margin-right: 2.3rem;
+    }
   }
 
   &__map {

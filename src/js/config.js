@@ -31,6 +31,9 @@ export const SLIDERS = {
       padding: '2rem',
       mediaQuery: 'min',
       breakpoints: {
+        [BREAKPOINTS.tablet]: {
+          padding: '2.4rem',
+        },
         [BREAKPOINTS.desktop]: {
           destroy: true,
         }

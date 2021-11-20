@@ -1,5 +1,5 @@
 .hero {
-  min-height: calc(100 * var(--vh, 1vh));
+  min-height: calc(100 * var(--static-vh, 1vh));
   color: #fff;
   background-image: url("../assets/img/hero-bg/main-mobile.jpg");
   background-repeat: no-repeat;
@@ -12,13 +12,13 @@
   &__list {}
 
   &__item {
-    min-height: calc(100 * var(--vh, 1vh));
+    min-height: calc(100 * var(--static-vh, 1vh));
     padding-top: var(--header-height);
     padding-bottom: 10.8rem;
     display: flex;
     flex-direction: column;
     @include breakpoint($desktop-width) {
-      min-height: calc(100 * var(--vh, 1vh) - 5rem);
+      min-height: calc(100vh - 5rem);
     }
   }
 

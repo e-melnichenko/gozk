@@ -1,24 +1,36 @@
 .section-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-right: -2rem;
+  @include breakpoint($desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-right: -2rem;
+  }
 
   &__link {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(50% - 2rem);
-    min-height: 27rem;
-    margin-right: 2rem;
-    padding: 4rem;
-    padding-top: 5rem;
+    min-height: 20.7rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    padding-bottom: 2.6rem;
+    padding-right: 4rem;
     text-decoration: none;
     color: #000;
     background: #EFF4F9;
     border-radius: 4px;
-
-    &._next {
-      align-items: flex-end;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include breakpoint($desktop-width) {
+      width: calc(50% - 2rem);
+      min-height: 27rem;
+      margin: 0;
+      margin-right: 2rem;
+      padding: 4rem;
+      padding-top: 5rem;
+      &._next {
+        align-items: flex-end;
+      }
     }
   }
 
@@ -34,15 +46,23 @@
   &__name {
     margin: auto 0;
     font-weight: 500;
-    font-size: 2.4rem;
-    line-height: 28px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
     letter-spacing: 0.03em;
+    @include breakpoint($desktop-width) {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
   }
 
   &__arrow {
-    width: 6rem;
-    height: 4rem;
+    width: 4rem;
+    height: 2.8rem;
     fill: $color-main;
     margin-top: 4.5rem;
+    @include breakpoint($desktop-width) {
+      width: 6rem;
+      height: 4rem;
+    }
   }
 }

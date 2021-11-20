@@ -96,6 +96,12 @@
   .splide {
     &__track {
       margin: 0 -2rem;
+      @include breakpoint($tablet-width) {
+        margin: 0 -2.4rem;
+      }
+      @include breakpoint($desktop-width) {
+        margin: 0;
+      }
     }
   }
 }

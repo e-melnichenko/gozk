@@ -12,7 +12,7 @@
   <link rel="preload" href="./assets/fonts/Raleway/Raleway-Regular.woff2" as="font" crossorigin="anonymous" />
   <link rel="preload" href="./assets/fonts/Raleway/Raleway-Medium.woff2" as="font" crossorigin="anonymous" />
 
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/main.css?4">
 
 </head>
 
@@ -128,23 +128,31 @@
           </li>
         </ul>
       </nav>
-      <div class="test">
-        <a href="#" class="header__lk-link js-lk-btn" aria-describedby="tooltip">
-          <span class="header__lk-icon"><svg><use xlink:href="assets/sprite.svg#lock"></use></svg></span>
-          <span class="header__lk-text">Личный кабинет</span>
-        </a>
-        <div class="tooltip js-lk-tooltip" role="tooltip">
-          Личный кабинет скоро появится
-          <div class="tooltip__arrow" data-popper-arrow></div>
-        </div>
+
+      <a href="#" class="header__lk-link js-lk-btn" aria-describedby="tooltip">
+        <span class="header__lk-icon"><svg><use xlink:href="assets/sprite.svg#lock"></use></svg></span>
+        <span class="header__lk-text">Личный кабинет</span>
+      </a>
+      <div class="tooltip js-lk-tooltip" role="tooltip">
+        Личный кабинет скоро появится
+        <div class="tooltip__arrow" data-popper-arrow></div>
       </div>
+      <button class="header__menu-toggle js-menu-toggle" type="button">
+        <svg class="header__menu-open">
+          <use xlink:href="assets/sprite.svg#menu-open"></use>
+        </svg>
+        <svg class="header__menu-close">
+          <use xlink:href="assets/sprite.svg#close"></use>
+        </svg>
+      </button>
+
     </header>
 
     <main class="site-content">
-      <section class="categories">
+      <section class="categories section">
         <div class="categories__hero" style="
-      --category-img-mobile: url(../assets/img/categories/services-participant.jpg);
-      --category-img-desktop: url(../assets/img/categories/services-participant.jpg);
+      --category-img-mobile: url(../assets/img/hero-bg/services-participant_mobile.jpg);
+      --category-img-desktop: url(../assets/img/hero-bg/services-participant.jpg);
     ">
           <div class="container">
             <div class="breadcrumbs">
@@ -161,64 +169,53 @@
                 </li>
               </ul>
             </div>
-
             <h1 class="categories__title title">Услуги участнику</h1>
           </div>
         </div>
-        <div class="categories__list-wrap">
-          <div class="container">
-            <ul class="categories__list">
 
-              <li class="categories__item">
-                <a href="#" class="categories__item-link">
-                  <h3 class="categories__item-title">Ускоренная регистрация на АСТ ГОЗ</h3>
-
+        <div class="container">
+          <ul class="categories__list">
+            <li class="categories__item">
+              <a href="#" class="categories__item-link">
+                <h3 class="categories__item-title">Ускоренная регистрация на АСТ ГОЗ</h3>
 
 
-                  <svg class="categories__item-arrow">
-                    <use xlink:href="assets/sprite.svg#arrow-right"></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="categories__item">
-                <a href="#" class="categories__item-link">
-                  <h3 class="categories__item-title">Поиск закупок, анализ документации</h3>
-
+                <svg class="categories__item-arrow">
+                  <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a href="#" class="categories__item-link">
+                <h3 class="categories__item-title">Поиск закупок, анализ документации</h3>
 
 
-                  <svg class="categories__item-arrow">
-                    <use xlink:href="assets/sprite.svg#arrow-right"></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="categories__item">
-                <a href="#" class="categories__item-link">
-                  <h3 class="categories__item-title">Подготовка заявки</h3>
-
+                <svg class="categories__item-arrow">
+                  <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a href="#" class="categories__item-link">
+                <h3 class="categories__item-title">Подготовка заявки</h3>
 
 
-                  <svg class="categories__item-arrow">
-                    <use xlink:href="assets/sprite.svg#arrow-right"></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="categories__item">
-                <a href="#" class="categories__item-link">
-                  <h3 class="categories__item-title">Подача заявки</h3>
-
+                <svg class="categories__item-arrow">
+                  <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="categories__item">
+              <a href="#" class="categories__item-link">
+                <h3 class="categories__item-title">Подача заявки</h3>
 
 
-                  <svg class="categories__item-arrow">
-                    <use xlink:href="assets/sprite.svg#arrow-right"></use>
-                  </svg>
-                </a>
-              </li>
-
-            </ul>
-          </div>
+                <svg class="categories__item-arrow">
+                  <use xlink:href="assets/sprite.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -230,7 +227,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <footer class="footer">
@@ -524,7 +520,7 @@
     </div>
   </div>
 
-  <script src="./js/main.js"></script>
+  <script src="./js/main.js?4"></script>
 </body>
 
 </html>

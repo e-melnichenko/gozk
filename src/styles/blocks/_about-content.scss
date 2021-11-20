@@ -5,7 +5,9 @@
     background-size: cover;
     background-position: center center;
     background-image: var(--category-img-mobile);
+    min-height: calc(100 * var(--static-vh, 1vh));
     @include breakpoint($tablet-width) {
+      min-height: auto;
       background-image: var(--category-img-desktop);
     }
 

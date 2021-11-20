@@ -40,7 +40,8 @@
   }
 
   video {
-    max-width: 100%;
+    // max-width: 100%;
+    width: 100%;
   }
 
   &:not(._services) {
@@ -49,22 +50,31 @@
     }
 
     ul {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: -2rem;
+      @include breakpoint($desktop-width) {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -2rem;
+      }
 
       li {
-        width: calc(100% / 3);
-        margin-top: 2rem;
+        margin-bottom: 2rem;
         padding: 0 2.2rem;
-        border-right: 1px solid rgba(0, 0, 0, 0.2);
         background-image: url("../assets/img/green-checkmark.svg");
         background-repeat: no-repeat;
         background-position: left .6rem top .4rem;
-        &:nth-child(3n) {
-          border-right: none;
-          padding-right: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        @include breakpoint($desktop-width) {
+          width: calc(100% / 3);
+          margin: 0;
+          margin-top: 2rem;
+          border-right: 1px solid rgba(0, 0, 0, 0.2);
+          &:nth-child(3n) {
+            border-right: none;
+            padding-right: 0;
+          }
         }
       }
     }

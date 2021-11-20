@@ -35,7 +35,7 @@
     top: var(--header-height, 8.3rem);
     left: var(--container-padding, 2rem);
     right: var(--container-padding, 2rem);
-    height: calc(100 * var(--vh, 1vh) - var(--header-height, 8.3rem));
+    height: calc(100 * var(--static-vh, 1vh) - var(--header-height, 8.3rem));
     overflow: auto;
     @include breakpoint($desktop-width) {
       position: static;
